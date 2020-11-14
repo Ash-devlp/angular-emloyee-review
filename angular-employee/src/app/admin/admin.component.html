@@ -1,0 +1,20 @@
+<div>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a [routerLink]="['employees']"
+          ><i class="fas fa-users"></i>All Employees</a
+        >
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['newemployee']"
+          ><i class="fas fa-user-plus"></i>Add New Employee</a
+        >
+      </li>
+      <li class="nav-item btn-logout" (click)="onLogout()">
+        <i class="fas fa-sign-out-alt"></i>Logout
+      </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,49 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <ng-container *ngFor="let employee of employees">
+        <tr class="table-row">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.firstname }}</td>
+          <td>{{ employee.lastname }}</td>
+          <td>{{ employee.email }}</td>
+          <td>
+            <button
+              class="btn btn-add-review"
+              (click)="onAddReview(employee.id)"
+            >
+              <i class="fas fa-id-card"></i> Add Review</button
+            ><button class="btn btn-edit" (click)="onEdit(employee)">
+              <i class="fas fa-user-edit"></i>
+              Edit
+            </button>
+            <button class="btn btn-delete" (click)="onDelete(employee.id)">
+              <i class="fas fa-user-minus"></i>
+              Delete
+            </button>
+          </td>
+        </tr>
+        <ng-container *ngIf="employee.reviewFormExpanded">
+          <tr>
+            <td colspan="5">
+              <app-add-reviewer [review_of]="employee"></app-add-reviewer>
+              <app-new-review *ngIf="!employee.reviewbymeexist">
+              </app-new-review
+              ><app-view-review [id]="employee.id"> </app-view-review>
+            </td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

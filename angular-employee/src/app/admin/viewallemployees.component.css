@@ -1,0 +1,30 @@
+.table {
+  width: 100%;
+  display: table;
+}
+td,
+th {
+  border: none;
+  text-align: left;
+  padding: 8px;
+}
+.table-row {
+  border: 1px solid #000;
+}
+.btn {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  color: #fff;
+  outline-style: none;
+}
+.btn-delete {
+  background-color: #ff5645;
+}
+.btn-edit {
+  background-color: #5af;
+}
+.btn-add-review {
+  background-color: #457090;
+}

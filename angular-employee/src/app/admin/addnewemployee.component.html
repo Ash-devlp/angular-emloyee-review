@@ -1,0 +1,67 @@
+<br />
+<div class="form">
+  <form class="my-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <h3>Employee Details</h3>
+
+    <div class="form-row">
+      <div class="form-column">
+        <label for="firstname">First Name</label>
+        <input
+          class="input"
+          type="text"
+          id="firstname"
+          formControlName="firstname"
+        />
+      </div>
+      <div class="form-column">
+        <label for="lastname">Last Name</label>
+        <input
+          class="input"
+          type="text"
+          id="lastname"
+          formControlName="lastname"
+        />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-column">
+        <label for="email">Email</label>
+        <input class="input" type="email" id="email" formControlName="email" />
+      </div>
+      <div class="form-column">
+        <label for="password">password</label>
+        <input
+          class="input"
+          type="text"
+          id="password"
+          formControlName="password"
+        />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-column">
+        <label for="hiredate">Date Hired on</label>
+        <input
+          class="input"
+          type="date"
+          id="email"
+          formControlName="hiredate"
+        />
+      </div>
+      <div class="form-column radio">
+        <label for="admin"> admin</label>
+        <input type="radio" id="admin" value="true" formControlName="isadmin" />
+        <label for="employee"> employee</label>
+        <input
+          type="radio"
+          id="employee"
+          value="false"
+          formControlName="isadmin"
+        />
+      </div>
+    </div>
+    <h6>Fill all fields to submit the form</h6>
+
+    <button class="btn" type="submit" [disabled]="!myForm.valid">Submit</button>
+  </form>
+</div>

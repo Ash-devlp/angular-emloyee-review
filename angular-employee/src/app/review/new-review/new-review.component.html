@@ -1,0 +1,100 @@
+<form class="my-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <h2>New Review</h2>
+
+  <div class="form-row">
+    <div class="form-col">
+      <div class="radio">
+        <h5>Adaptability</h5>
+        <label for="1"> 1</label>
+        <input type="radio" id="1" value="1" formControlName="adaptability" />
+        <label for="2"> 2</label>
+        <input type="radio" id="2" value="2" formControlName="adaptability" />
+        <label for="2"> 3</label>
+        <input type="radio" id="3" value="3" formControlName="adaptability" />
+        <label for="2"> 4</label>
+        <input type="radio" id="4" value="4" formControlName="adaptability" />
+        <label for="2"> 5</label>
+        <input type="radio" id="5" value="5" formControlName="adaptability" />
+      </div>
+      <div class="radio">
+        <h5>communication</h5>
+        <label for="1"> 1</label>
+        <input type="radio" id="1" value="1" formControlName="communication" />
+        <label for="2"> 2</label>
+        <input type="radio" id="2" value="2" formControlName="communication" />
+        <label for="2"> 3</label>
+        <input type="radio" id="3" value="3" formControlName="communication" />
+        <label for="2"> 4</label>
+        <input type="radio" id="4" value="4" formControlName="communication" />
+        <label for="2"> 5</label>
+        <input type="radio" id="5" value="5" formControlName="communication" />
+      </div>
+
+      <div class="radio">
+        <h5>punctuality</h5>
+        <label for="1"> 1</label>
+        <input type="radio" id="1" value="1" formControlName="punctuality" />
+        <label for="2"> 2</label>
+        <input type="radio" id="2" value="2" formControlName="punctuality" />
+        <label for="2"> 3</label>
+        <input type="radio" id="3" value="3" formControlName="punctuality" />
+        <label for="2"> 4</label>
+        <input type="radio" id="4" value="4" formControlName="punctuality" />
+        <label for="2"> 5</label>
+        <input type="radio" id="5" value="5" formControlName="punctuality" />
+      </div>
+      <div class="radio">
+        <h5>quality of work</h5>
+        <label for="1"> 1</label>
+        <input
+          type="radio"
+          id="1"
+          value="1"
+          formControlName="quality_of_work"
+        />
+        <label for="2"> 2</label>
+        <input
+          type="radio"
+          id="2"
+          value="2"
+          formControlName="quality_of_work"
+        />
+        <label for="2"> 3</label>
+        <input
+          type="radio"
+          id="3"
+          value="3"
+          formControlName="quality_of_work"
+        />
+        <label for="2"> 4</label>
+        <input
+          type="radio"
+          id="4"
+          value="4"
+          formControlName="quality_of_work"
+        />
+        <label for="2"> 5</label>
+        <input
+          type="radio"
+          id="5"
+          value="5"
+          formControlName="quality_of_work"
+        />
+      </div>
+    </div>
+
+    <div class="form-col">
+      <h5>comment</h5>
+      <textarea
+        name=""
+        id=""
+        cols="46"
+        rows="12"
+        placeholder="                    add comment"
+        formControlName="comment"
+      ></textarea>
+    </div>
+  </div>
+  <h6>Fill all fields to submit the form</h6>
+  <button class="btn" type="submit" [disabled]="!myForm.valid">Login</button>
+</form>

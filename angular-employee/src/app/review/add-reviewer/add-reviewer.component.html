@@ -1,0 +1,50 @@
+<form class="my-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <h2>New Reviewer</h2>
+
+  <div class="form-row">
+    <div class="form-id">
+      <label for="email">Review of ID:</label>
+      <input
+        class="input"
+        type="text"
+        id="review_of"
+        formControlName="review_of_id"
+      />
+    </div>
+    <div class="form-name">
+      <label for="email"> NAME:</label>
+      <input
+        class="input"
+        type="text"
+        id="review_of"
+        formControlName="review_of"
+      />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-id">
+      <label for="email">Review by ID:</label>
+      <input
+        class="input"
+        type="text"
+        id="review_of"
+        formControlName="review_by_id"
+      />
+    </div>
+    <div class="form-name">
+      <label for="password"> NAME:</label>
+      <input
+        class="input"
+        type="text"
+        id="review_by"
+        formControlName="review_by"
+      />
+    </div>
+  </div>
+
+  <h6>Fill all fields to submit the form</h6>
+
+  <button class="btn" type="submit" [disabled]="!myForm.valid">
+    ADD REVIEWER
+  </button>
+</form>

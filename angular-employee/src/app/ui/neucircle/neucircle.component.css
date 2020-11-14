@@ -1,0 +1,121 @@
+.container {
+  min-height: auto;
+  padding: 0 0;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-default);
+  flex-wrap: wrap;
+}
+.bar {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: -3px -3px 7px #ffffffb2, 3px 3px 5px rgba(94, 104, 121, 0.945);
+  overflow: hidden;
+  margin: 0px;
+}
+.bar:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  box-shadow: inset -3px -3px 7px #ffffffb0,
+    inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+}
+svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+svg circle {
+  position: absolute;
+  transform: scale(0.939);
+  transform-origin: center;
+  fill: none;
+  stroke: rgba(190, 5, 42, 0.767);
+  stroke-width: 15px;
+  stroke-dasharray: 315px;
+}
+.bar svg .c1 {
+  animation: bar_1 1s ease forwards;
+}
+.bar svg .c2 {
+  animation: bar_2 1s ease forwards;
+}
+.bar svg .c3 {
+  animation: bar_3 1s ease forwards;
+}
+.bar svg .c4 {
+  animation: bar_4 1s ease forwards;
+}
+.bar svg .c5 {
+  animation: bar_5 1s ease forwards;
+}
+
+h1 {
+  position: absolute;
+  font-size: 20px;
+  font-family: "Montserrat";
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+@keyframes bar_1 {
+  0% {
+    stroke-dashoffset: 315px;
+  }
+  100% {
+    stroke-dashoffset: calc(315px - (315px * 20) / 100);
+  }
+}
+@keyframes bar_2 {
+  0% {
+    stroke-dashoffset: 315px;
+    stroke: rgba(190, 5, 42, 0.767);
+  }
+  100% {
+    stroke-dashoffset: calc(315px - (315px * 40) / 100);
+    stroke: rgba(128, 0, 110, 0.767);
+  }
+}
+@keyframes bar_3 {
+  0% {
+    stroke-dashoffset: 315px;
+    stroke: rgba(190, 5, 42, 0.767);
+  }
+  100% {
+    stroke-dashoffset: calc(315px - (315px * 60) / 100);
+    stroke: rgba(29, 82, 126, 0.767);
+  }
+}
+@keyframes bar_4 {
+  0% {
+    stroke-dashoffset: 315px;
+    stroke: rgba(190, 5, 42, 0.767);
+  }
+  100% {
+    stroke-dashoffset: calc(315px - (315px * 80) / 100);
+    stroke: rgba(25, 97, 87, 0.767);
+  }
+}
+@keyframes bar_5 {
+  0% {
+    stroke-dashoffset: 315px;
+    stroke: rgba(190, 5, 42, 0.767);
+  }
+  100% {
+    stroke-dashoffset: calc(315px - (315px * 100) / 100);
+    stroke: rgba(58, 151, 55, 0.767);
+  }
+}

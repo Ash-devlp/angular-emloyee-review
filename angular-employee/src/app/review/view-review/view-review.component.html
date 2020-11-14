@@ -1,0 +1,30 @@
+<ng-container *ngFor="let review of reviews">
+  <div class="box">
+    <div class="row">
+      <div class="col">
+        adaptability
+        <app-neucircle [score]="review.adaptability"> </app-neucircle>
+      </div>
+      <div class="col">
+        communication
+        <app-neucircle [score]="review.communication"> </app-neucircle>
+      </div>
+      <div class="col">
+        punctuality
+        <app-neucircle [score]="review.punctuality"> </app-neucircle>
+      </div>
+      <div class="col">
+        quality
+        <app-neucircle [score]="review.quality_of_work"> </app-neucircle>
+      </div>
+    </div>
+    <div class="row-comment">
+      comment <br />
+      {{ review.comments }}
+    </div>
+    <div class="row-comment">
+      Feedback<br />
+      {{ review.feedback }}
+    </div>
+  </div>
+</ng-container>
